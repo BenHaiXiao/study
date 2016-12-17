@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#ingoremaven 
+*.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo __pycache__ *.rej *~ #*# .#* .*.swp .DS_Store *.iml *.target .idea *.class *.jar *.target *.iml target

@@ -7,7 +7,7 @@ import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 /**
- * Created by xiaobenhai@yy.com
+ * Created by BenHaiXiao
  * Date: 2016/12/16
  * Time: 23:45
  */

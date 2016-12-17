@@ -3,7 +3,7 @@ package com.github.benhaixiao.mapstruct.examples.fieldmappings;
 import java.util.List;
 
 /**
- * Created by xiaobenhai@yy.com
+ * Created by BenHaiXiao
  * Date: 2016/12/16
  * Time: 23:44
  */
