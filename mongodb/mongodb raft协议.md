@@ -69,7 +69,7 @@ Raft算法将Server划分为3种角色：
 
 2. 某些Term由于选举失败，不存在Leader
 
-3.       每个Server本地维护currentTerm
+3. 每个Server本地维护currentTerm
 
 ![img](http://img.blog.csdn.net/20140804203911429?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3N6aG91d2Vp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
@@ -211,6 +211,12 @@ Leader从不“重写”或者“删除”本地Log，仅仅“追加”本地Lo
 **Raft给出的方案：**Client赋予每个command唯一标识，Leader在接收command之前首先检查本地log，若标识已存在，则直接响应。如此，只要Client没有crash，可以做到“Exactly Once”的语义保证。
 
 **个人建议：**尽量保证操作的“幂等性”，简化系统设计！
+
+
+
+## mongodb扩展
+
+
 
 ## 参考文献
 

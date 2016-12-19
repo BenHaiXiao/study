@@ -1,0 +1,36 @@
+@startuml
+
+package "mongodbClient0" {
+[mongodbClient0]-->[路由服务节点]
+}
+package "mongodbClient1" {
+[mongodbClient1]-->[路由服务节点]
+}
+package "mongodbClient2" {
+[mongodbClient2]-->[路由服务节点]
+}
+
+package "路由服务节点" {
+ [路由服务节点（mongos）]-->[配置服务集（config）]
+[配置服务集（config）]-->[分片节点0（shard0）]
+[配置服务集（config）]-->[分片节点1（shard1）]
+[配置服务集（config）]-->[分片节点2（shard2）]
+}
+package "配置服务集（config）" {
+[配置服务集0(config0)] - [配置服务集1(config1)]
+[配置服务集1(config1)]-[配置服务集2(config2))]
+}
+
+package "分片节点0（shard0）" {
+[复制集节点0(r0)] - [复制集节点1(r1)]
+[复制集节点1(r1)]-[冲裁节点2(r2)]
+}
+package "分片节点1（shard1）" {
+[复制集节点0(r0)] - [复制集节点1(r1)]
+[复制集节点1(r1)]-[冲裁节点2(r2)]
+}
+package "分片节点2（shard2）" {
+[复制集节点0(r0)] - [复制集节点1(r1)]
+[复制集节点1(r1)]-[冲裁节点2(r2)]
+}
+@enduml
